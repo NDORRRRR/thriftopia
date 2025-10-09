@@ -48,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const likedClass = isLiked ? 'liked' : '';
 
             const productCard = document.createElement('div');
-            productCard.className = 'col-6 col-md-4 col-lg-3'; // Responsif grid
+            productCard.className = 'col-6 col-md-4 col-lg-3';
+            productCard.setAttribute('data-aos', 'fade-up');
             productCard.innerHTML = `
                 <div class="card product-card h-100">
                     <div class="card-img-container">
