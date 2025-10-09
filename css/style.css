@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    color: #e74c3c !important;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6)), url('https://www.gresiksatu.com/wp-content/uploads/2023/03/28566465-148c-4027-af23-15985e3d35b0.jpeg') no-repeat center center;
+    background-size: cover;
+    height: 60vh;
+}
+
+.filter-btn.active {
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.product-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2 ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-container {
+    position: relative;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #dc3545;
+}
+
+.product-card .badge {
+    font-size: 0.75rem;
+}
+
+.heart-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.heart-icon:hover {
+    transform: scale(1.1);
+}
+
+.heart-icon.liked {
+    color: #e74c3c;
+}
+
+.team-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #eee;
+}
+
+#pesanTerkirimModal .modal-header {
+    border-bottom: none;
+}
+
+#pesanTerkirimModal .modal-footer {
+    border-bottom: none;
+}
+
+#pesanTerkirimModal .bi-check-circle-fill {
+    border-bottom: 4rem;
+}
