@@ -1,116 +1,235 @@
+/* DEFINISI VARIABEL WARNA (TEMA)             */
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --card-bg-color: #ffffff;
+    --card-shadow-color: rgba(0, 0, 0, 0.1);
+    --navbar-bg-color: #ffffff;
+    --brand-color: #e74c3c;
+    --secondary-text-color: #6c757d;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #FFD580;
+    --card-bg-color: #1e1e1e;
+    --card-shadow-color: rgba(0, 0, 0, 0.4);
+    --navbar-bg-color: #1e1e1e;
+    --brand-color: #e74c3c;
+    --secondary-text-color: #a98c5a;
+}
+
+/* STYLING GLOBAL MENGGUNAKAN VARIABEL        */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-brand {
-    color: #e74c3c !important;
+/* Navbar */
+.navbar { 
+    background-color: var(--navbar-bg-color) !important; 
+    transition: background-color 0.3s ease; 
 }
 
-.hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.6)), url('https://www.gresiksatu.com/wp-content/uploads/2023/03/28566465-148c-4027-af23-15985e3d35b0.jpeg') no-repeat center center;
-    background-size: cover;
-    height: 60vh;
+.navbar-brand { 
+    color: var(--brand-color) !important; 
 }
 
-.filter-btn.active {
-    background-color: #dc3545;
-    color: white;
-    border-color: #dc3545;
+.dark-mode .navbar-toggler-icon {
+    filter: invert(1); 
 }
 
-.product-card {
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
+.nav-link { 
+    color: var(--text-color) !important; 
 }
 
-.product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+/* Hero Section */
+.hero-section { 
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.gresiksatu.com/wp-content/uploads/2023/03/28566465-148c-4027-af23-15985e3d35b0.jpeg') 
+    no-repeat center center; background-size: 
+    cover; height: 60vh; 
 }
 
-.card-img-container {
-    position: relative;
+/* Card Styling */
+.card {
+    background-color: var(--card-bg-color) !important; 
+    color: var(--text-color) !important; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-.product-card .price {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #dc3545;
+.card .text-muted { 
+    color: var(--secondary-text-color) !important;
 }
 
-.product-card .badge {
-    font-size: 0.75rem;
+.dark-mode .text-muted {
+    color: var(--secondary-text-color) !important;
 }
 
-.heart-icon {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.8rem;
-    color: rgba(255, 255, 255, 0.8);
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
-    transition: color 0.2s ease, transform 0.2s ease;
+.product-card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 8px 30px var(--card-shadow-color); 
 }
 
-.heart-icon:hover {
-    transform: scale(1.1);
+.card-img-container { 
+    position: relative; 
+    overflow: hidden; 
+    aspect-ratio: 1 / 1; 
 }
 
-.heart-icon.liked {
-    color: #e74c3c;
+.card-img-container img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: transform 0.3s ease; 
 }
 
-.team-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: 3px solid #eee;
+.product-card:hover .card-img-container img { 
+    transform: scale(1.05); 
 }
 
-#pesanTerkirimModal .modal-header {
+/* Modal Styling */
+.modal-content { 
+    background-color: var(--card-bg-color); 
+    color: var(--text-color); 
+}
+
+.modal-header, .modal-footer { 
+    border-color: rgba(255, 255, 255, 0.1); 
+}
+
+.dark-mode .btn-close { 
+    filter: invert(1) grayscale(100%) brightness(200%); 
+}
+
+/* Accordion Styling */
+.accordion-item, .accordion-button { 
+    background-color: var(--card-bg-color) !important; 
+    color: var(--text-color) !important; 
+}
+
+.dark-mode .accordion-button::after { 
+    filter: invert(1) grayscale(100%) brightness(200%); 
+}
+
+.filter-btn.active { 
+    background-color: #dc3545; 
+    color: white; 
+    border-color: #dc3545; 
+}
+
+.product-card { 
+    border: none; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    transition: transform 0.2s ease, 
+    box-shadow 0.2s ease; 
+    cursor: pointer; 
+}
+
+.product-card .price { 
+    font-size: 1.2rem; 
+    font-weight: 500; 
+    color: var(--brand-color); 
+}
+
+.product-card .badge { 
+    font-size: 0.75rem; 
+}
+
+.heart-icon { 
+    position: absolute; 
+    top: 15px; 
+    right: 15px; 
+    font-size: 1.8rem; 
+    color: rgba(255, 255, 255, 0.8); 
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7); 
+    transition: color 0.2s ease, transform 0.2s ease; 
+}
+
+.heart-icon:hover { 
+    transform: scale(1.1); 
+}
+
+.heart-icon.liked { 
+    color: #e74c3c; 
+}
+
+.team-img { 
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border: 3px solid #eee; 
+}
+
+#pesanTerkirimModal .modal-header, 
+
+#pesanTerkirimModal .modal-footer { 
     border-bottom: none;
 }
 
-#pesanTerkirimModal .modal-footer {
-    border-bottom: none;
+#pesanTerkirimModal .bi-check-circle-fill { 
+    font-size: 4rem; 
 }
 
-#pesanTerkirimModal .bi-check-circle-fill {
-    font-size: 4rem;
+.scroll-top-btn { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 1000; 
+    display: none; 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    background-color: #dc3545; 
+    color: white; 
+    text-align: center; 
+    line-height: 50px; 
+    font-size: 1.5rem; 
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
 }
 
-.scroll-top-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    
-    display: none;
-    
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #dc3545;
-    color: white;
-    
-    text-align: center;
-    line-height: 50px;
-    font-size: 1.5rem;
-    
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.scroll-top-btn.show {
-    display: block;
+.scroll-top-btn.show { 
+    display: block; 
 }
 
 .scroll-top-btn:hover {
-    background-color: #c82333;
-    color: white;
+    background-color: #c82333; 
+    color: white; 
+}
+
+/*STYLING UNTUK CAROUSEL & PROGRESS BAR*/
+.carousel-item .carousel-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Kunci utama: rasio 16:9 */
+    overflow: hidden;
+    max-height: 70vh; /* Batas tinggi maksimal agar tidak terlalu besar */
+}
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 5s ease-in-out;
+}
+.carousel-item.active img {
+    transform: scale(1.15);
+}
+.carousel-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 10;
+}
+.carousel-progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: var(--brand-color);
 }
