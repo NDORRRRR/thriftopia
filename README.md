@@ -46,16 +46,14 @@ Thriftopia adalah sebuah prototipe website jual beli barang bekas (thrift store)
 ---
 
 ## 📁 Struktur Folder
-thriftopia-project/
-|
+thriftopia/
 ├── css/
-│   └── style.css 
+│   └── style.css
 ├── js/
 │   ├── main.js
 │   └── script.js
 ├── images/
 │   └── (semua gambar produk)
-│
 ├── index.html
 ├── produk.html
 ├── tentang.html
