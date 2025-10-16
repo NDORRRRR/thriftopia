@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 6, name: 'Nike Air Force 1', price: 350000, image: 'images/sepatu2.jpg', category: 'sepatu', condition: 'Seperti Baru' },
         { id: 7, name: 'Celana Kargo Pria', price: 110000, image: 'images/baju5.jpg', category: 'pakaian-pria', condition: 'Baik' },
         { id: 8, name: 'Tas Tote Kulit Wanita', price: 75000, image: 'images/baju6.jpg', category: 'pakaian-wanita', condition: 'Baru' },
+        { id: 9, name: 'Totebag VANS', price: 160000, image: 'images/tbvans.jpg', category: 'pakaian-pria', condition: 'Baru' },
+        { id: 10, name: 'Tas Converse', price: 180000, image: 'images/tasc.jpg', category: 'pakaian-wanita', category: 'pakaian-pria', condition: 'Baru' },
+        { id: 11, name: 'Pinion Denim', price: 1250000, image: 'images/pinion.jpg', category: 'pakaian-pria', condition: 'Baru' },
+        { id: 12, name: 'Momotaro', price: 2599999, image: 'images/momotaro.jpg', category: 'pakaian-pria', condition: 'Baru' },
+
     ];
 
     const productGrid = document.getElementById('product-grid');
