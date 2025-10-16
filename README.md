@@ -9,7 +9,7 @@ Sebuah website e-commerce statis bertema thrift store yang dibangun sebagai Proy
 ## 📸 Tampilan
 
 ![Tampilan Website Thriftopia](HOME.png)
-*Tampilan halaman utama dan halaman produk Thriftopia di desktop.*
+*Tampilan halaman utama dan Thriftopia di desktop.*
 
 ---
 
@@ -47,7 +47,7 @@ Thriftopia adalah sebuah prototipe website jual beli barang bekas (thrift store)
 
 ## 📁 Struktur Folder
 thriftopia-project/
-│
+|
 ├── css/
 │   └── style.css 
 ├── js/
