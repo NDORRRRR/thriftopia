@@ -75,5 +75,7 @@ thriftopia/
 
 3. Buka file index.html di local browser Anda.
 
+---
+
 ## Penjelasan Pada Youtube
 ```
