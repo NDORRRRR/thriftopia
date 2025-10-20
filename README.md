@@ -68,7 +68,7 @@ thriftopia/
 
 1. Clone repository ini ke mesin lokal Anda:
    ```bash
-   git clone [https://github.com/NAMA-USER-GITHUB/NAMA-REPO.git](https://github.com/NDORRRRR/thriftopia.git)
+   git clone https://github.com/NDORRRRR/thriftopia.git
 
 2. Masuk ke direktori proyek:
     cd thriftopia
