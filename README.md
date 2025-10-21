@@ -78,4 +78,5 @@ thriftopia/
 ---
 
 ## Penjelasan Pada Youtube
-```
+   ```
+   https://youtu.be/Ksw2N7O1nlc
